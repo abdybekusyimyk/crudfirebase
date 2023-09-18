@@ -1,12 +1,17 @@
 // import 'dart:convert';
 
 class ToDuModel {
-  ToDuModel({required this.title, required this.name, required this.isselect});
+  ToDuModel(
+      {this.id,
+      required this.title,
+      required this.name,
+      required this.isselect});
+  String? id;
   final String title;
   final String name;
   final bool isselect;
 
-  Map<String, dynamic> ToMap() {
+  Map<String, dynamic> toMap() {
     return <String, dynamic>{
       "title": title,
       "name": name,
